@@ -235,9 +235,17 @@
       {
         "files": [
           "**/*.md"],
-        "src": "exchange-ps/redirect",
+        "src": "exchange-ps/exchange",
         "version": "exchange-ps",
-        "dest": "module/exchange"
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "exchange-ps/exchange/exchange-ps",
+        "version": "exchange-ps",
+        "dest": "module/exchange-ps"
       }
     ],
     "resource": [
