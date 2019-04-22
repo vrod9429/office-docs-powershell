@@ -13,7 +13,6 @@ ms.reviewer:
 # Add-TeamUser
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
 
 Adds an owner or member to the team, and to the unified group which backs the team. 
 
