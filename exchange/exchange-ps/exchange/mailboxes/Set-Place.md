@@ -23,18 +23,21 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-Place [-Identity] <RecipientIdParameter>
  [-AudioDeviceName <String>]
+ [-BookingType <String>]
  [-Building <String>]
  [-Capacity <System.Int32>]
  [-City <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-DisplayDeviceName <String>]
- [-Floor <System.Int32>]
+ [-FloorNumber <System.Int32>]
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <$true | $false>]
  [-Label <String>]
+ [-Nickname <String>]
  [-Phone <String>]
  [-PostalCode <String>]
+ [-Roomlist <EmailAddress>]
  [-State <String>]
  [-Street <String>]
  [-Tags <String[]>]
@@ -94,6 +97,22 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -BookingType
+The BookingType parameter specifies the how the room can be booked. If the value contains spaces, enclose the value in quotation marks (").
+
+The default value is standard.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -196,8 +215,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Floor
-The Floor parameter specifies the floor that the room is on. If the value contains spaces, enclose the value in quotation marks (").
+### -FloorNumber
+The FloorNumber parameter specifies the floor that the room is on. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: System.Int32
@@ -242,9 +261,9 @@ Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
-Required: False
+Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -264,6 +283,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Nickname
+The Nickname parameter specifies the nickname of the room. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Phone
 The Phone parameter specifies the room's telephone number.
 
@@ -284,6 +317,20 @@ The PostalCode parameter specifies the room's postal code.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -Roomlist
+The Roomlist parameter specifies the roomlist that the rooms belongs to.
+
+```yaml
+Type: EmailAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
